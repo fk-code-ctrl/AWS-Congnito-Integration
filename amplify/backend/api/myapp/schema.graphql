@@ -1,0 +1,11 @@
+type Query  {
+  todos: [Todo] @function(name: "todos-${env}")
+  getTodo(id:ID): Todo @function(name: "todos-${env}")
+  
+ }
+
+type Todo  {
+  id: ID!
+  name: String!
+  description: String
+}
